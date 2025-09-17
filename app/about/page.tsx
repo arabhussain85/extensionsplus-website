@@ -80,7 +80,7 @@ export default function AboutPage() {
               </div>
               <div className="relative">
                 <img
-                  src="/extensionsplus-team-working-on-home-extension-p.jpg"
+                  src="/construction-team-building-house-extension.jpg"
                   alt="ExtensionsPlus team aan het werk aan een aanbouw project"
                   className="rounded-lg shadow-lg w-full h-auto"
                 />
@@ -135,7 +135,7 @@ export default function AboutPage() {
               </div>
               <div className="relative">
                 <img
-                  src="/netherlands-map-showing-extensionsplus-service.jpg"
+                  src="/netherlands-map-showing-extensionsplus-service.webp"
                   alt="Kaart van Nederland met ExtensionsPlus werkgebied"
                   className="rounded-lg shadow-lg w-full h-auto"
                 />

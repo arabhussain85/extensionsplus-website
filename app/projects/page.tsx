@@ -1,13 +1,20 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Clock, Euro, MapPin, ArrowRight } from "lucide-react"
-import type { Metadata } from "next"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Clock, Euro, MapPin, ArrowRight } from "lucide-react";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Projecten & Voorbeelden | ExtensionsPlus",
-  description: "Bekijk recente aanbouwen en kozijnprojecten met materialen, doorlooptijd en budgetrange.",
-}
+  description:
+    "Bekijk recente aanbouwen en kozijnprojecten met materialen, doorlooptijd en budgetrange.",
+};
 
 export default function ProjectsPage() {
   const projects = [
@@ -17,7 +24,12 @@ export default function ProjectsPage() {
       description: "EPDM dak, kunststof kozijnen, HR++",
       duration: "3 weken",
       budget: "€16.000–€19.000",
-      materials: ["EPDM dak", "Kunststof kozijnen", "HR++ glas", "Standaard afwerking"],
+      materials: [
+        "EPDM dak",
+        "Kunststof kozijnen",
+        "HR++ glas",
+        "Standaard afwerking",
+      ],
       location: "Amsterdam",
       type: "Aanbouw",
       image: "/amsterdam-home-extension-with-epdm-roof-and-plasti.jpg",
@@ -28,7 +40,12 @@ export default function ProjectsPage() {
       description: "Volledige gevelrenovatie met moderne aluminium kozijnen",
       duration: "1 dag",
       budget: "€10.000–€13.000",
-      materials: ["Aluminium profielen", "Triple glas", "Nieuwe dorpels", "Professionele montage"],
+      materials: [
+        "Aluminium profielen",
+        "Triple glas",
+        "Nieuwe dorpels",
+        "Professionele montage",
+      ],
       location: "Utrecht",
       type: "Kozijnen",
       image: "/utrecht-house-with-new-aluminum-windows-and-triple.jpg",
@@ -39,7 +56,12 @@ export default function ProjectsPage() {
       description: "Luxe keukenuitbouw met grote lichtstraat en schuifpui",
       duration: "4 weken",
       budget: "€28.000–€32.000",
-      materials: ["Lichtstraat", "Schuifpui", "Premium afwerking", "Vloerverwarming"],
+      materials: [
+        "Lichtstraat",
+        "Schuifpui",
+        "Premium afwerking",
+        "Vloerverwarming",
+      ],
       location: "Den Haag",
       type: "Aanbouw",
       image: "/den-haag-luxury-kitchen-extension-with-skylight-an.jpg",
@@ -50,7 +72,12 @@ export default function ProjectsPage() {
       description: "Restauratie van monumentale houten kozijnen",
       duration: "2 dagen",
       budget: "€8.500–€11.000",
-      materials: ["Houten kozijnen", "HR++ glas", "Authentieke beslag", "Schilderwerk"],
+      materials: [
+        "Houten kozijnen",
+        "HR++ glas",
+        "Authentieke beslag",
+        "Schilderwerk",
+      ],
       location: "Rotterdam",
       type: "Kozijnen",
       image: "/rotterdam-historic-wooden-windows-renovation-with.jpg",
@@ -61,7 +88,12 @@ export default function ProjectsPage() {
       description: "Betaalbare casco aanbouw voor latere eigen afwerking",
       duration: "2 weken",
       budget: "€14.000–€17.000",
-      materials: ["Casco constructie", "EPDM dak", "Basis isolatie", "Ruwe aansluitingen"],
+      materials: [
+        "Casco constructie",
+        "EPDM dak",
+        "Basis isolatie",
+        "Ruwe aansluitingen",
+      ],
       location: "Haarlem",
       type: "Aanbouw",
       image: "/haarlem-casco-living-room-extension-ready-for-fut.jpg",
@@ -72,14 +104,19 @@ export default function ProjectsPage() {
       description: "Complete kozijnvervanging voor betere isolatie",
       duration: "1 dag",
       budget: "€12.000–€15.000",
-      materials: ["Kunststof kozijnen", "HR++ glas", "Nieuwe ventilatie", "Kierdichting"],
+      materials: [
+        "Kunststof kozijnen",
+        "HR++ glas",
+        "Nieuwe ventilatie",
+        "Kierdichting",
+      ],
       location: "Eindhoven",
       type: "Kozijnen",
-      image: "/eindhoven-energy-efficient-upvc-windows-replaceme.jpg",
+      image: "/eindhoven-energy-efficient-upvc-windows-replacemet.jpg",
     },
-  ]
+  ];
 
-  const filterTypes = ["Alle", "Aanbouw", "Kozijnen"]
+  const filterTypes = ["Alle", "Aanbouw", "Kozijnen"];
 
   return (
     <div className="min-h-screen">
@@ -87,9 +124,12 @@ export default function ProjectsPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-background to-muted py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground text-balance">Projecten</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold text-foreground text-balance">
+              Projecten
+            </h1>
             <p className="text-xl text-muted-foreground leading-relaxed text-pretty">
-              Echte voorbeelden met materialen, doorlooptijd en budgetrange. Zo weet je precies wat je kunt verwachten.
+              Echte voorbeelden met materialen, doorlooptijd en budgetrange. Zo
+              weet je precies wat je kunt verwachten.
             </p>
           </div>
         </section>
@@ -99,7 +139,11 @@ export default function ProjectsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap gap-4 justify-center">
               {filterTypes.map((type) => (
-                <Button key={type} variant={type === "Alle" ? "default" : "outline"} size="sm">
+                <Button
+                  key={type}
+                  variant={type === "Alle" ? "default" : "outline"}
+                  size="sm"
+                >
                   {type}
                 </Button>
               ))}
@@ -112,7 +156,10 @@ export default function ProjectsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
-                <Card key={index} className="overflow-hidden group hover:shadow-lg transition-shadow">
+                <Card
+                  key={index}
+                  className="overflow-hidden group hover:shadow-lg transition-shadow"
+                >
                   <div className="aspect-video overflow-hidden">
                     <img
                       src={project.image || "/placeholder.svg"}
@@ -122,23 +169,39 @@ export default function ProjectsPage() {
                   </div>
                   <CardHeader>
                     <div className="flex items-center gap-2 mb-2">
-                      <Badge variant={project.type === "Aanbouw" ? "default" : "secondary"}>{project.type}</Badge>
+                      <Badge
+                        variant={
+                          project.type === "Aanbouw" ? "default" : "secondary"
+                        }
+                      >
+                        {project.type}
+                      </Badge>
                       <div className="flex items-center gap-1 text-sm text-muted-foreground">
                         <MapPin className="h-3 w-3" />
                         {project.location}
                       </div>
                     </div>
                     <CardTitle className="text-xl">{project.title}</CardTitle>
-                    <CardDescription className="text-base">{project.subtitle}</CardDescription>
-                    <p className="text-sm text-muted-foreground">{project.description}</p>
+                    <CardDescription className="text-base">
+                      {project.subtitle}
+                    </CardDescription>
+                    <p className="text-sm text-muted-foreground">
+                      {project.description}
+                    </p>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="flex flex-wrap gap-2">
-                      <Badge variant="outline" className="flex items-center gap-1">
+                      <Badge
+                        variant="outline"
+                        className="flex items-center gap-1"
+                      >
                         <Clock className="h-3 w-3" />
                         Doorlooptijd: {project.duration}
                       </Badge>
-                      <Badge variant="outline" className="flex items-center gap-1">
+                      <Badge
+                        variant="outline"
+                        className="flex items-center gap-1"
+                      >
                         <Euro className="h-3 w-3" />
                         Budget: {project.budget}
                       </Badge>
@@ -147,16 +210,91 @@ export default function ProjectsPage() {
                       <h4 className="font-medium text-sm mb-2">Materialen:</h4>
                       <div className="flex flex-wrap gap-1">
                         {project.materials.map((material, materialIndex) => (
-                          <Badge key={materialIndex} variant="outline" className="text-xs">
+                          <Badge
+                            key={materialIndex}
+                            variant="outline"
+                            className="text-xs"
+                          >
                             {material}
                           </Badge>
                         ))}
                       </div>
                     </div>
-                    <Button variant="outline" size="sm" className="w-full bg-transparent">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full bg-transparent"
+                    >
                       Bekijk details
                       <ArrowRight className="ml-2 h-3 w-3" />
                     </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Images Section */}
+        <section className="py-20 bg-muted">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center space-y-4 mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance">
+                Ons Werkproces in Beeld
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+                Van eerste opname tot eindoplevering - zo werken wij aan uw
+                project.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  step: "1",
+                  title: "Opname & Advies",
+                  image:
+                    "/construction-worker-measuring-house-extension-site.jpg",
+                  description: "Professionele opname ter plaatse",
+                },
+                {
+                  step: "2",
+                  title: "Voorbereiding",
+                  image: "/construction-materials-delivery-truck-at-house.jpg",
+                  description: "Materialen en planning gereed",
+                },
+                {
+                  step: "3",
+                  title: "Uitvoering",
+                  image: "/construction-team-building-house-extension.jpg",
+                  description: "Vakkundige uitvoering door ons team",
+                },
+                {
+                  step: "4",
+                  title: "Oplevering",
+                  image: "/completed-house-extension-with-happy-homeowners.jpg",
+                  description: "Eindcontrole en sleuteloverdracht",
+                },
+              ].map((item, index) => (
+                <Card key={index} className="overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <img
+                      src={item.image || "/placeholder.svg"}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <CardContent className="p-4 text-center">
+                    <div
+                      className="inline-flex items-center justify-center w-8 h-8 rounded-full mb-2"
+                      style={{ backgroundColor: "#1e293b", color: "#ffffff" }}
+                    >
+                      {item.step}
+                    </div>
+                    <h3 className="font-medium text-sm mb-1">{item.title}</h3>
+                    <p className="text-xs text-muted-foreground">
+                      {item.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
@@ -172,7 +310,8 @@ export default function ProjectsPage() {
                 Geïnspireerd door onze projecten?
               </h2>
               <p className="text-xl text-muted-foreground text-pretty">
-                Laat ons weten wat u voor ogen heeft en ontvang binnen 24 uur een heldere prijsindicatie.
+                Laat ons weten wat u voor ogen heeft en ontvang binnen 24 uur
+                een heldere prijsindicatie.
               </p>
             </div>
             <Button size="lg">Vraag uw offerte aan</Button>
@@ -180,5 +319,5 @@ export default function ProjectsPage() {
         </section>
       </main>
     </div>
-  )
+  );
 }
